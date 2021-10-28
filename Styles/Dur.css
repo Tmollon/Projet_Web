@@ -1,0 +1,40 @@
+*{ 
+    background-color:black; 
+}
+
+h1{
+    margin-top: 50px;
+    color:aqua;
+}
+
+li{
+    background-color:black;
+    color :rgb(255, 0, 221);
+    display: inline;
+    align-content: center;
+    
+}
+
+div{
+    color:rgb(255, 17, 0);
+}
+
+a{
+    margin-left: 0;
+    width: 100%;
+    color:rgb(255, 0, 221);
+    text-decoration: rgb(43, 128, 226);
+    background-color:grey;
+    padding: 14px 16px;
+    display: inline;
+    align-content: center;
+}
+
+ul{
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin:0 50px;
+      
+}
