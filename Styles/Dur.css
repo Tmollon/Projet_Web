@@ -1,5 +1,9 @@
-*{ 
-    background-color:black; 
+body{ 
+    background-image:
+    radial-gradient(
+      rgb(148, 6, 161),
+      #000000
+    );
 }
 
 h1{
@@ -8,15 +12,14 @@ h1{
 }
 
 li{
-    background-color:black;
     color :rgb(255, 0, 221);
     display: inline;
     align-content: center;
-    
 }
 
 div{
-    color:rgb(255, 17, 0);
+    color:#000000;
+    text-align: center;
 }
 
 a{
@@ -24,17 +27,22 @@ a{
     width: 100%;
     color:rgb(255, 0, 221);
     text-decoration: rgb(43, 128, 226);
-    background-color:grey;
     padding: 14px 16px;
     display: inline;
-    align-content: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 1s;
+}
+
+a:hover{
+    background-color: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    zoom: 1;
 }
 
 ul{
-    
     position: fixed;
     top: 0;
     width: 100%;
-    margin:0 50px;
-      
 }
