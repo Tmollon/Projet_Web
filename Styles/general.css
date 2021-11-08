@@ -19,6 +19,7 @@ header{
 }
 nav {
   font-size: 12px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-color:rgba(0, 0, 0,0);
   margin: 3em 0 6em;
   padding: 0 1em;
