@@ -17,7 +17,7 @@
   
   <nav id="menu">
     <ul id="menu-closed">
-      <li><a href="My_Drugs.html">Accueil</a></li>
+      <li><a href="index.php">Accueil</a></li>
       <li><a href="Page/Douce.html">Douce</a></li>
       <li><a href="Page/Dur.html">Dure</a></li>
       <li><a href="Page/Legal.html">Legale</a></li>
@@ -51,23 +51,23 @@
     <div class="upper-part">
       <div class="info-area" id="test">
         <label class="song-info" id="song-info-1">
-          <div class="title">Bunker</div>
+          <div class="title"><a href="/Page/Dur.html">Extasy Mario</a></div>
           <div class="sub-line">
-            <div class="subtitle">Balthazar</div>
+            <div class="subtitle">1 up ta soirée</div>
 
           </div>
         </label>
         <label class="song-info" id="song-info-2">
-          <div class="title">Words Remain</div>
+          <div class="title">Extasy Mitsubishi</div>
           <div class="sub-line">
-            <div class="subtitle">Moderator</div>
+            <div class="subtitle">Une défonce à 300 cheveaux</div>
 
           </div>
         </label>
         <label class="song-info" id="song-info-3">
-          <div class="title">Falling Out</div>
+          <div class="title">Extasy Superman</div>
           <div class="sub-line">
-            <div class="subtitle">Otzeki</div>
+            <div class="subtitle">Te fera planer toute la nuit</div>
 
           </div>
         </label>
