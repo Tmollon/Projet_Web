@@ -27,7 +27,7 @@
       
     </ul>
   </nav>
-
+<div class="carroussel">
   <div class="container">
     <input type="radio" name="slider" id="item-1" checked>
     <input type="radio" name="slider" id="item-2">
