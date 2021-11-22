@@ -1,116 +1,150 @@
-
-
-
-.résumer {
-    position: relative;
-    text-align: center;
-  }
-
-
-.texte_image{
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+* {
+  box-sizing: border-box;
 }
 
-#picture_region{
-    opacity: 0.4;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-h1{
-    margin-top: 50px;
-    color:aqua;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.4s ease-in;
+  
+}
+body.blue {
+  background-color: #428aa6;
 }
 
-li{
-    color :rgb(255, 0, 221);
-    display: inline;
-    text-align: center;
+input[type=radio] {
+  display: none;
 }
 
-div{
-    color:#000000;
-    text-align: center;
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
 }
 
-a{
-    margin-left: 0;
-    width: 100%;
-    color:rgb(255, 0, 221);
-    text-decoration: rgb(43, 128, 226);
-    padding: 14px 16px;
-    display: inline;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transition: 1s;
+.container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-a:hover{
-    background-color: black;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    zoom: 1;
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+.player {
+  background-color: #fff;
+  border-radius: 8px;
+  min-width: 320px;
+  padding: 16px 10px;
+}
+
+.upper-part {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  height: 36px;
+  overflow: hidden;
 }
 
 
-ul{
-    
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin:center;    
+
+.song-info {
+  width: calc(100% - 32px);
+  display: block;
 }
 
-tr{
-    margin:center
+.song-info .title {
+  color: #403d40;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.sub-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.subtitle, .time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #c6c5c6;
 }
 
 
-tr:hover{
-    background-color: black;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    zoom: 1;
+
+.info-area {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transition: transform 0.4s ease-in;
 }
 
-
-
-table{
-    -webkit-animation: color-change 1s infinite;
-    -moz-animation: color-change 1s infinite;
-    -o-animation: color-change 1s infinite;
-    -ms-animation: color-change 1s infinite;
-    animation: color-change 1s infinite;
-    margin: center ;
-    width: 100%; /* largeur obligatoire pour être centré */
-
+#item-2:checked ~ .player #test {
+  transform: translateY(0);
 }
 
-@-webkit-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
+#item-2:checked ~ .player #test {
+  transform: translateY(-40px);
 }
-@-moz-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-@-ms-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-@-o-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-@keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
+
+#item-3:checked ~ .player #test {
+  transform: translateY(-80px);
 }
