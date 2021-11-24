@@ -31,6 +31,9 @@
                     Legale();}
                 elseif ($_GET['action'] == 'Contact') {
                     Contact();}      
+                }
+                else {
+                    Accueil();
                 }?>
 
     </main>
