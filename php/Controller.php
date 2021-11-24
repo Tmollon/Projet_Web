@@ -20,4 +20,7 @@ function Contact()
 {
     require("Contact.php");}
 
+function Inscription()
+{
+    require("inscription.php");}
 ?>
