@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="Styles/Contact.css">
+<link rel="stylesheet" href="../Styles/Contact.css">
 
-<link rel="stylesheet" href="Styles/general.css">
+<link rel="stylesheet" href="../Styles/general.css">
 
 <script src="Scripts/Contact.js"></script>
 
