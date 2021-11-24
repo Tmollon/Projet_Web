@@ -23,4 +23,6 @@ function Contact()
 function Inscription()
 {
     require("inscription.php");}
-?>
+function traitement()
+{
+    require("traitement.php");}

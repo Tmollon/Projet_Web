@@ -1,3 +1,22 @@
+<?php
+
+
+$BDD = array();
+$BDD['host'] = "localhost";
+$BDD['user'] = "root";
+$BDD['pass'] = "password";
+$BDD['db'] = "drugs";
+$mysqli = mysqli_connect($BDD['host'], $BDD['user'], $BDD['pass'], $BDD['db']);
+if (!$mysqli) {
+    echo "Connexion non établie.";
+    exit;
+}
+
+?>
+
+
+
+
 <link rel="stylesheet" href="Styles/Contact.css">
 
 <link rel="stylesheet" href="Styles/general.css">
@@ -7,7 +26,7 @@
 
 <div class="wrapper">
     <h2>CONTACTEZ NOUS</h2>
-    <form action="traitement.php" method="POST">
+    <form action="/Projet_Web/index.php?action=traitement" method="POST">
         <div class="form-group">
             <label for="nom">Nom Prénom</label>
             <input type="text" name="nom" id="nom" placeholder="Nom et Prénom" required minlength="3" maxlength="25" />
