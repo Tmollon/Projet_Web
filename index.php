@@ -16,12 +16,10 @@
 
 <body class="Site">
     <main class="Site-content">
-        <?php include('header.php');?>
-        <?php $request_path = $_SERVER['PATH_INFO'];
-        echo(pathinfo);
-        if (substr($request_path, 1, 8) === 'acceuil') {
-             include('acceuil.php');
-        }?>
+        <?php include('header.php');
+        include('acceuil.php');
+        ?> 
+        
         
     </main>
     <?php include('footer.php');?>
