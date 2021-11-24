@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>My Drugs</title>
-  <link rel="stylesheet" href="../Styles/Contact.css">
+  <link rel="stylesheet" href="../Styles/traitement.css">
 
   <link rel="stylesheet" href="../Styles/general.css">
 
@@ -27,26 +27,9 @@
       
     </ul>
   </nav>
-  <div class="wrapper">
-    <h2>CONTACTEZ NOUS</h2>
-    <form action="traitement.php" method="POST">
-      <div class="form-group">
-        <label for="nom">Nom Prénom</label>
-        <input type="text" name="nom" id="nom" placeholder="Nom et Prénom" required minlength="3" maxlength="25" />
-      </div>
-      <div class="form-group">
-        <label for="email">Addresse Email</label>
-        <input type="email" name="Email" id="email" placeholder="email@domaine.com" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea name="Message" id="message" rows="5" placeholder="Entrez votre message..."></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="submit"><i class="far fa-paper-plane"></i>Envoyer</button>
-      </div>
-    </form>
-  </div>
+  <div id="message_remerciement"> <?php $retour = mail('tom.mollon.69@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From : admin@my_drugs.com');
+    if ($retour) {
+        echo '<p>Votre message a bien été envoyé.</p>';}?><</div>
   </main>
   <footer>
     <p>My Drugs© exclu toute responsabilité au vu de l'utilisation de nos produits, nous déclinons aussi toute responsabilité en cas de perte de colis #cheh PS: ce site est interdit aux policiers</p>
