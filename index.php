@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>My Drugs</title>
-    <link rel="stylesheet" href="Styles/My_Drugs.css">
+ 
 
     <link rel="stylesheet" href="Styles/general.css">
 
@@ -17,7 +17,7 @@
 <body class="Site">
     <main class="Site-content">
 
-        <?php include('header.php');?>
+        <?php include('php/header.php');?>
             <?php
             require('Controller.php');
             if (isset($_GET['action'])) {
@@ -34,7 +34,7 @@
                 }?>
 
     </main>
-    <?php include('footer.php');?>
+    <?php include('php/footer.php');?>
 </body>
 
 </html>
