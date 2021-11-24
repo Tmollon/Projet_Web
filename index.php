@@ -16,6 +16,7 @@
 
 <body class="Site">
     <main class="Site-content">
+
         <?php include('header.php');?>
             <?php
             require('Controller.php');
@@ -31,6 +32,7 @@
                 elseif ($_GET['action'] == 'Contact') {
                     Contact();}      
                 }?>
+
     </main>
     <?php include('footer.php');?>
 </body>
