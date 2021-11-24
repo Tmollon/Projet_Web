@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>My Drugs</title>
-    <link rel="stylesheet" href="Styles/My_Drugs.css">
+ 
 
     <link rel="stylesheet" href="Styles/general.css">
 
@@ -16,23 +16,25 @@
 
 <body class="Site">
     <main class="Site-content">
-        <?php include('header.php');?>
+
+        <?php include('php/header.php');?>
             <?php
-            require('Controller.php');
+            require('php/Controller.php');
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'Accueil') {
-                    include("php/Accueil.php");}
+                    Accueil();}
                 elseif ($_GET['action'] == 'Dure') {
-                    include("php/Dur.php");}
+                    Dur();}
                 elseif ($_GET['action'] == 'Douce') {
-                        include("php/Douce.php");}
+                    Douce();}
                 elseif ($_GET['action'] == 'Legale') {
-                        include("php/Legale.php");}
+                    Legale();}
                 elseif ($_GET['action'] == 'Contact') {
-                        include("php/Contact.php");}      
+                    Contact();}      
                 }?>
+
     </main>
-    <?php include('footer.php');?>
+    <?php include('php/footer.php');?>
 </body>
 
 </html>
