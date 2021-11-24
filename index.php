@@ -21,15 +21,15 @@
             require('Controller.php');
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'Accueil') {
-                    include("php/Accueil.php");}
+                    Accueil();}
                 elseif ($_GET['action'] == 'Dure') {
-                    include("php/Dur.php");}
+                    Dur();}
                 elseif ($_GET['action'] == 'Douce') {
-                        include("php/Douce.php");}
+                    Douce();}
                 elseif ($_GET['action'] == 'Legale') {
-                        include("php/Legale.php");}
+                    Legale();}
                 elseif ($_GET['action'] == 'Contact') {
-                        include("php/Contact.php");}      
+                    Contact();}      
                 }?>
     </main>
     <?php include('footer.php');?>
