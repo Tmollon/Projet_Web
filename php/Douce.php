@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../Styles/Douce.css">
+<link rel="stylesheet" href="Styles/Douce.css">
 
 
 <script src="Scripts/Douce.js"></script>
@@ -6,7 +6,7 @@
 <div class="container">
     <div class="card">
         <div class="card-head">
-            <img src="../Phot" class="product-img">
+            <img src="Photos/ganja.png" class="product-img">
             <div class="product-detail">
                 <h2>La frappe</h2> Jardinus est de retour pour vos 
                 papilles
@@ -26,13 +26,7 @@
                 <span class="product-caption">
                     Basket Ball Collection
                 </span>
-                <span class="product-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star grey"></i>
-                </span>
+
             </div>
             <div class="product-properties">
                 <span class="product-size">
