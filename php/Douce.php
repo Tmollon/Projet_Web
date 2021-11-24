@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../Styles/Douce.css">
 
-<link rel="stylesheet" href="../Styles/general.css">
 
 <script src="Scripts/Douce.js"></script>
 <div class="container">

@@ -9,13 +9,13 @@
 
 
     <div class="cards">
-        <label class="card" for="item-1" id="song-1">
+        <label class="card" for="item-1" id="img-1">
             <img src="Photos/Extasy_Mario.png" alt="Mario Taz Wii">
         </label>
-        <label class="card" for="item-2" id="song-2">
+        <label class="card" for="item-2" id="img-2">
             <img src="Photos/Extasy_Mitsubishi_Motors.png" alt="song">
         </label>
-        <label class="card" for="item-3" id="song-3">
+        <label class="card" for="item-3" id="img-3">
             <img src="Photos/Extasy_Superman.png" alt="song">
         </label>
 
