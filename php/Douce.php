@@ -1,19 +1,18 @@
 <link rel="stylesheet" href="../Styles/Douce.css">
 
-<link rel="stylesheet" href="../Styles/general.css">
 
 <script src="Scripts/Douce.js"></script>
+
 <div class="container">
     <div class="card">
         <div class="card-head">
-            <img src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="logo" class="card-logo">
-            <img src="https://s5.postimg.cc/j9r8yf9gn/sws1.png" alt="Shoe" class="product-img">
+            <img src="../Phot" class="product-img">
             <div class="product-detail">
-                <h2>Hartbeespoort</h2> Support and Nike Zoom Air come together for a more supportive feel with
-                high-speed responsiveness
+                <h2>La frappe</h2> Jardinus est de retour pour vos 
+                papilles
             </div>
             <span class="back-text">
-                FAS
+                W$$D
             </span>
         </div>
         <div class="card-body">
@@ -37,21 +36,13 @@
             </div>
             <div class="product-properties">
                 <span class="product-size">
-                    <h4>Size</h4>
+                    <h4>Quantity</h4>
                     <ul class="ul-size">
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#" class="active">10</a></li>
-                        <li><a href="#">11</a></li>
-                    </ul>
-                </span>
-                <span class="product-color">
-                    <h4>Colour</h4>
-                    <ul class="ul-color">
-                        <li><a href="#" class="orange active"></a></li>
-                        <li><a href="#" class="green"></a></li>
-                        <li><a href="#" class="yellow"></a></li>
+                        <li><a href="#">10g</a></li>
+                        <li><a href="#">20g</a></li>
+                        <li><a href="#">50g</a></li>
+                        <li><a href="#" class="active">75g</a></li>
+                        <li><a href="#">100g</a></li>
                     </ul>
                 </span>
                 <span class="product-price">
@@ -60,14 +51,4 @@
             </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-<div class="yt">
-    <a href="https://www.youtube.com/watch?v=jYAmKNOJ4Ck" target="_blank">
-        <img width="151" src="https://s5.postimg.cc/vzwuxmw87/template.png" alt="" />
-    </a>
 </div>
