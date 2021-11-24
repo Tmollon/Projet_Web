@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="Styles/My_Drugs.css">
+
+<link rel="stylesheet" href="Styles/general.css">
+
 <div class="container">
     <input type="radio" name="slider" id="item-1" checked>
     <input type="radio" name="slider" id="item-2">
