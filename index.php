@@ -16,11 +16,23 @@
 
 <body class="Site">
     <main class="Site-content">
-        <?php include('header.php');
-        include('acceuil.php');
-        ?> 
-        
-        
+
+        <?php include('header.php');?>
+            <?php
+            require('Controller.php');
+            if (isset($_GET['action'])) {
+                if ($_GET['action'] == 'Accueil') {
+                    Accueil();}
+                elseif ($_GET['action'] == 'Dure') {
+                    Dur();}
+                elseif ($_GET['action'] == 'Douce') {
+                    Douce();}
+                elseif ($_GET['action'] == 'Legale') {
+                    Legale();}
+                elseif ($_GET['action'] == 'Contact') {
+                    Contact();}      
+                }?>
+
     </main>
     <?php include('footer.php');?>
 </body>
