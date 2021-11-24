@@ -2,23 +2,27 @@
 
 function Accueil()
 {
-    require("../php/Accueil.php");}
+    include("../php/Accueil.php");}
     
 function Douce()
 {
-    require("../php/Douce.php");}    
+    include("../php/Douce.php");}    
     
 function Dur()
 {
-    require("../php/Dur.php");}
+    include("../php/Dur.php");}
 
 function Legal()
 {
-    require("../php/Legal.php");}
+    include("../php/Legal.php");}
 
 function Contact()
 {
-    require("../php/Contact.php");}
+    include("../php/Contact.php");}
+
+function Inscription()
+{
+    include("../Page/Inscription.php");}
 
 ?>
 
