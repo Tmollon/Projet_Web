@@ -1,5 +1,9 @@
+<link rel="stylesheet" href="../Styles/Douce.css">
 
-  <div class="container">
+<link rel="stylesheet" href="../Styles/general.css">
+
+<script src="Scripts/Douce.js"></script>
+<div class="container">
     <div class="card">
       <div class="card-head">
         <img src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="logo" class="card-logo">
@@ -66,6 +70,3 @@
       <img width="151" src="https://s5.postimg.cc/vzwuxmw87/template.png" alt="" />
     </a>
   </div>
-  </main>
-</body>
-</html>
