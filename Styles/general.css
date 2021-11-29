@@ -48,7 +48,7 @@ nav {
   margin: 3em 0 6em;
   padding: 0 1em;
   height: 44px; /* Menu height */
-  overflow: hidden; /* Don't show anything outside the nav */
+  /*overflow: hidden; /* Don't show anything outside the nav */
 }
 
 nav ul {
