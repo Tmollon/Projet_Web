@@ -18,15 +18,15 @@ if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
 
     if ($username !== "" && $password !== "") {
         $requete = "SELECT count(*) FROM membres where 
-              pseudo = '" . $username . "' and mdp = '" . $password . "' ";
+              pseudo = '" . $username . "' and mdp = '" . md5($password) . "' ";
         $exec_requete = mysqli_query($db, $requete);
         $reponse      = mysqli_fetch_array($exec_requete);
         $count = $reponse['count(*)'];
         if ($count != 0) // nom d'utilisateur et mot de passe correctes
         {
             $_SESSION['pseudo'] = $username;
-            echo ("t'es co");
-            //header('Location: principale.php');
+            //echo ("t'es co");
+            header('Location: index.php?action=Accueil');
         } else {
             header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }
@@ -42,7 +42,7 @@ mysqli_close($db); // fermer la connexion
 <link rel="stylesheet" href="Styles/general.css">
 
 <div class="wrapper">
-    <h2>Connecter vous</h2>
+    <h2>Connectez vous</h2>
     <form action="/Projet_Web/index.php?action=Connexion" method="POST">
         <div class="form-group">
             <label for="nom">Pseudo</label>
