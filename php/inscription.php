@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="Styles/inscription.css">
+
+<link rel="stylesheet" href="Styles/general.css">
+
 <?php
 
 
@@ -13,7 +17,7 @@ if (!$mysqli) {
 }
 
 $AfficherFormulaire = 1;
-if (isset($_POST['pseudo'], $_POST['mdp'])) {
+if (isset($_POST['pseudo'], $_POST['email'], $_POST['mdp'])) {
     if (empty($_POST['pseudo'])) {
         echo "Le champ Pseudo est vide.";
     } elseif (!preg_match("#^[a-z0-9]+$#", $_POST['pseudo'])) {
@@ -26,7 +30,7 @@ if (isset($_POST['pseudo'], $_POST['mdp'])) {
         echo "Ce pseudo est déjà utilisé.";
     } else {
 
-        if (!mysqli_query($mysqli, "INSERT INTO membres SET pseudo='" . $_POST['pseudo'] . "', mdp='" . md5($_POST['mdp']) . "'")) {
+        if (!mysqli_query($mysqli, "INSERT INTO membres SET pseudo='" . $_POST['pseudo'] . "',email='" . $_POST['email'] . "', mdp='" . md5($_POST['mdp']) . "'")) {
             echo "Une erreur s'est produite: " . mysqli_error($mysqli);
         } else {
             echo "Vous êtes inscrit avec succès!";
@@ -38,15 +42,27 @@ if (isset($_POST['pseudo'], $_POST['mdp'])) {
 if ($AfficherFormulaire == 1) {
 ?>
 
-    <br />
 
-    <form method="post" action="/Projet_Web/index.php?action=Inscription">
-        Pseudo (a-z0-9) : <input type="text" name="pseudo">
-        <br />
-        Mot de passe : <input type="password" name="mdp">
-        <br />
-        <input type="submit" value="S'inscrire">
-    </form>
+    <div class="wrapper">
+        <h2>Inscrivez vous</h2>
+        <form action="/Projet_Web/index.php?action=Inscription" method="POST">
+            <div class="form-group">
+                <label for="nom">Pseudo</label>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required minlength="3" maxlength="25" />
+            </div>
+            <div class="form-group">
+                <label for="email">Addresse Email</label>
+                <input type="email" name="email" id="email" placeholder="email@domaine.com" />
+            </div>
+            <div class="form-group">
+                <label for="message">Mot de passe</label>
+                <input type="password" name="mdp" id="mdp" placeholder="mot de passe " />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit"><i class="far fa-paper-plane"></i>Envoyer</button>
+            </div>
+        </form>
+    </div>
 <?php
 }
 ?>

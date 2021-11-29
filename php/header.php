@@ -9,6 +9,7 @@
         <li><a href="index.php?action=Legal">Legale</a></li>
         <li><a href="index.php?action=Contact">Contact</a></li>
         <li><a href="index.php?action=Inscription">Inscription</a></li>
+        <li><a href="index.php?action=Connexion">Connexion</a></li>
         <li><a href="#menu-closed">&#215; Close menu</a></li>
         <li><a href="#menu">&#9776; Menu</a></li>
 

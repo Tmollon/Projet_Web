@@ -27,11 +27,15 @@
             } elseif ($_GET['action'] == 'Douce') {
                 Douce();
             } elseif ($_GET['action'] == 'Legale') {
-                Legale();
+                Legal();
             } elseif ($_GET['action'] == 'Contact') {
                 Contact();
             } elseif ($_GET['action'] == 'Inscription') {
                 Inscription();
+            } elseif ($_GET['action'] == 'traitement') {
+                traitement();
+            } elseif ($_GET['action'] == 'Connexion') {
+                connexion();
             }
         } else {
             Accueil();
