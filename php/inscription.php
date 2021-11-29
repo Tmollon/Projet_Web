@@ -24,8 +24,7 @@
                 <li><a href="Dur.html">Dure</a></li>
                 <li><a href="Legal.html">Legale</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="#menu-closed">&#215; Close menu</a></li>
-                <li><a href="#menu">&#9776; Menu</a></li>
+                <li><a href="Contact.html">Contact</a></li>
 
 
             </ul>

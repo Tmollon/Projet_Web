@@ -15,3 +15,6 @@
     </ul>
 
 </nav>
+<div id="inscription">
+    <li><a href="index.php?action=Inscription">inscription</a></li>
+</div>
