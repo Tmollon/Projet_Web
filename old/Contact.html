@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>My Drugs</title>
+  <link rel="stylesheet" href="../Styles/Contact.css">
+
+  <link rel="stylesheet" href="../Styles/general.css">
+
+  <script src="Scripts/Contact.js"></script>
+
+  <link rel="icon" type="image/jpg" sizes="16x16" href="https://thumbs.dreamstime.com/b/logo-de-feuille-drogue-cannabis-style-d-ensemble-130132151.jpg">
+</head>
+<body class="Site">
+  <main class="Site-content">
+  <header>M4_Dr2g$.c0m </header>
+  <nav id="menu">
+    <ul id="menu-closed">
+      <li><a href="../index.php?action=Accueil">Accueil</a></li>
+      <li><a href="Douce.html">Douce</a></li>
+      <li><a href="Dur.html">Dure</a></li>
+      <li><a href="Legal.html">Legale</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="#menu-closed">&#215; Close menu</a></li>
+      <li><a href="#menu">&#9776; Menu</a></li>
+      
+      
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <h2>CONTACTEZ NOUS</h2>
+    <form action="traitement.php" method="POST">
+      <div class="form-group">
+        <label for="nom">Nom Prénom</label>
+        <input type="text" name="nom" id="nom" placeholder="Nom et Prénom" required minlength="3" maxlength="25" />
+      </div>
+      <div class="form-group">
+        <label for="email">Addresse Email</label>
+        <input type="email" name="Email" id="email" placeholder="email@domaine.com" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="Message" id="message" rows="5" placeholder="Entrez votre message..."></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="submit"><i class="far fa-paper-plane"></i>Envoyer</button>
+      </div>
+    </form>
+  </div>
+  </main>
+  <footer>
+    <p>My Drugs© exclu toute responsabilité au vu de l'utilisation de nos produits, nous déclinons aussi toute responsabilité en cas de perte de colis #cheh PS: ce site est interdit aux policiers</p>
+</footer>
+</body>
+</html>
