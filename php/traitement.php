@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="Styles/traitement.css">
+
+
 <?php
 
 $AfficherFormulaire = 1;
@@ -14,15 +17,23 @@ if (isset($_POST['nom'], $_POST['Email'], $_POST['Message'])) {
 
         if (!mysqli_query($mysqli, "INSERT INTO Avis SET NomPrenom='" . $_POST['nom'] . "', Email='" . $_POST['Email'] . "', Avis='" . $_POST['Message'] . "'")) {
             echo "Une erreur s'est produite: " . mysqli_error($mysqli);
-            echo "Votre avis est pris en compte";
+        } else {
+            echo "Vous êtes inscrit avec succès!";
+
             $AfficherFormulaire = 0;
         }
     }
 }
+if ($AfficherFormulaire == 1) {
 ?>
 
 
 
-<link rel="stylesheet" href="Styles/traitement.css">
 
-<p>Votre avis est bien enregistrer</p>
+
+    <div id="message_remerciement">
+        <p>Votre avis est bien enregistré</p>
+    </div>
+<?php
+}
+?>

@@ -2,28 +2,47 @@
 
 function Accueil()
 {
-    require("Accueil.php");}
-    
+    require("Accueil.php");
+}
+
 function Douce()
 {
-    require("Douce.php");}    
-    
+    require("Douce.php");
+}
+
 function Dur()
 {
-    require("Dur.php");}
+    require("Dur.php");
+}
 
 function Legal()
 {
-    require("Legal.php");}
+    require("Legal.php");
+}
 
 function Contact()
 {
-    require("Contact.php");}
+
+    require("Contact.php");
+}
+
+
 function Inscription()
 {
-    require("inscription.php");}
+    require("inscription.php");
+}
+
 function traitement()
 {
-    require("traitement.php");}
+
+    require("traitement.php");
+}
+
+function connexion()
+{
+    require("connexion.php");
+}
+
 
 ?>
+

@@ -17,24 +17,31 @@
 <body class="Site">
     <main class="Site-content">
 
-        <?php include('php/header.php');?>
-            <?php
-            require('php/Controller.php');
-            if (isset($_GET['action'])) {
-                if ($_GET['action'] == 'Accueil') {
-                    Accueil();}
-                elseif ($_GET['action'] == 'Dure') {
-                    Dur();}
-                elseif ($_GET['action'] == 'Douce') {
-                    Douce();}
-                elseif ($_GET['action'] == 'Legale') {
-                    Legale();}
-                elseif ($_GET['action'] == 'Contact') {
-                    Contact();}      
-                }
-                else {
-                    Accueil();
-                }?>
+        <?php include('php/header.php'); ?>
+        <?php
+        require('php/Controller.php');
+        if (isset($_GET['action'])) {
+            if ($_GET['action'] == 'Accueil') {
+                Accueil();
+            } elseif ($_GET['action'] == 'Dure') {
+                Dur();
+            } elseif ($_GET['action'] == 'Douce') {
+                Douce();
+            } elseif ($_GET['action'] == 'Legale') {
+                Legal();
+            } elseif ($_GET['action'] == 'Contact') {
+                Contact();
+            } elseif ($_GET['action'] == 'Inscription') {
+                Inscription();
+            } elseif ($_GET['action'] == 'traitement') {
+                traitement();
+            } elseif ($_GET['action'] == 'Connexion') {
+                connexion();
+            }
+        } else {
+            Accueil();
+        } ?>
+
 
     </main>
     <?php include('php/footer.php');?>
