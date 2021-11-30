@@ -19,6 +19,10 @@
 
 
 <div>
+    <form method="post" action="index.php?action=Deconnecter">
+        <input type="submit" value="Se déconnecter" id="logout" />
+        <input type="texte" name="deconnecte" hidden value="deconnecte"/>
+    </form>
     <li><a href="index.php?action=Connexion">Connexion</a></li>
     <li><a href="index.php?action=Inscription">Inscription</a></li>
 

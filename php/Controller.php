@@ -43,6 +43,7 @@ function connexion()
     require("connexion.php");
 }
 
-
-?>
-
+function deconnexion()
+{
+    require("connexion.php");
+}

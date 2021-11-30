@@ -37,6 +37,8 @@
                 traitement();
             } elseif ($_GET['action'] == 'Connexion') {
                 connexion();
+            }elseif ($_GET['action'] == 'Deconnecter') {
+                deconnexion();
             }
         } else {
             Accueil();
