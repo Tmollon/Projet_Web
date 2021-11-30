@@ -25,8 +25,8 @@ if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
         if ($count != 0) // nom d'utilisateur et mot de passe correctes
         {
             $_SESSION['pseudo'] = $username;
-            //echo ("t'es co");
             header('Location: index.php?action=Accueil');
+            var_dump($_SESSION['pseudo']);
         } else {
             header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }
