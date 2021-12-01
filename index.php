@@ -1,3 +1,9 @@
+<?php
+session_start();
+var_dump($_SESSION['pseudo']);
+?>
+
+
 <!doctype html>
 <html lang="fr">
 

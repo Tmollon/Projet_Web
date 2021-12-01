@@ -1,4 +1,3 @@
-
 <script src="Scripts/Contact.js"></script>
 
 
@@ -68,3 +67,6 @@ if ($AfficherFormulaire == 1) {
             </div>
         </form>
     </div>
+<?php
+}
+?>

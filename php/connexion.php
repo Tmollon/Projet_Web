@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
     // connexion à la base de données
     $db_username = 'root';
@@ -35,10 +34,7 @@ if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
 }
 mysqli_close($db); // fermer la connexion
 ?>
-<?php
-var_dump($_SESSION['pseudo']);
 
-?>
 
 <?php
 if (isset($_POST['deconnecte'])) {
@@ -47,6 +43,9 @@ if (isset($_POST['deconnecte'])) {
 }
 ?>
 
+<?php
+var_dump($_SESSION['pseudo']);
+?>
 
 <link rel="stylesheet" href="Styles/inscription.css">
 
