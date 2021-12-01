@@ -18,7 +18,7 @@
         <div class="card-body">
             <div class="product-desc">
                 <span class="product-title">
-                    Hartbee<b>spoort</b>
+                    Hartbee<b>spooort</b>
                     <span class="badge">
                         New
                     </span>
