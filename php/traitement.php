@@ -1,43 +1,39 @@
-<!doctype html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <title>My Drugs</title>
-    <link rel="stylesheet" href="../Styles/traitement.css">
-
-    <link rel="stylesheet" href="../Styles/general.css">
-
-    <script src="Scripts/Contact.js"></script>
-
-    <link rel="icon" type="image/jpg" sizes="16x16"
-        href="https://thumbs.dreamstime.com/b/logo-de-feuille-drogue-cannabis-style-d-ensemble-130132151.jpg">
-</head>
-
-<body class="Site">
-    <main class="Site-content">
-        <header>M4_Dr2g$.c0m </header>
-        <nav id="menu">
-            <ul id="menu-closed">
-                <li><a href="../index.php">Accueil</a></li>
-                <li><a href="Douce.html">Douce</a></li>
-                <li><a href="Dur.html">Dure</a></li>
-                <li><a href="Legal.html">Legale</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="#menu-closed">&#215; Close menu</a></li>
-                <li><a href="#menu">&#9776; Menu</a></li>
+<link rel="stylesheet" href="Styles/traitement.css">
 
 
-            </ul>
-        </nav>
-        <div id="message_remerciement"> <?php $retour = mail('tom.mollon.69@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From : admin@my_drugs.com');
-    if ($retour) {
-        echo '<p>Votre message a bien été envoyé.</p>';}?><< /div>
-    </main>
-    <footer>
-        <p>My Drugs© exclu toute responsabilité au vu de l'utilisation de nos produits, nous déclinons aussi toute
-            responsabilité en cas de perte de colis #cheh PS: ce site est interdit aux policiers</p>
-    </footer>
-</body>
+<?php
 
-</html>
+$AfficherFormulaire = 1;
+
+if (isset($_POST['nom'], $_POST['Email'], $_POST['Message'])) {
+
+    if (empty($_POST['nom'])) {
+        echo "Le champ nom est vide.";
+    } elseif (empty($_POST['Email'])) {
+        echo "Le champ Email est vide.";
+    } elseif (empty($_POST['Message'])) {
+        echo "Le champ message est vide.";
+    } else {
+
+        if (!mysqli_query($mysqli, "INSERT INTO Avis SET NomPrenom='" . $_POST['nom'] . "', Email='" . $_POST['Email'] . "', Avis='" . $_POST['Message'] . "'")) {
+            echo "Une erreur s'est produite: " . mysqli_error($mysqli);
+        } else {
+            echo "Vous êtes inscrit avec succès!";
+
+            $AfficherFormulaire = 0;
+        }
+    }
+}
+if ($AfficherFormulaire == 1) {
+?>
+
+
+
+
+
+    <div id="message_remerciement">
+        <p>Votre avis est bien enregistré</p>
+    </div>
+<?php
+}
+?>
