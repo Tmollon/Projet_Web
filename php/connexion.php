@@ -25,7 +25,6 @@ if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
         if ($count != 0) // nom d'utilisateur et mot de passe correctes
         {
             $_SESSION['pseudo'] = $username;
-            //echo ("t'es co");
             header('Location: index.php?action=Accueil');
         } else {
             header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
@@ -36,6 +35,18 @@ if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
 }
 mysqli_close($db); // fermer la connexion
 ?>
+<?php
+var_dump($_SESSION['pseudo']);
+
+?>
+
+<?php
+if (isset($_POST['deconnecte'])) {
+    var_dump('deconnecter');
+    session_destroy();
+}
+?>
+
 
 <link rel="stylesheet" href="Styles/inscription.css">
 
