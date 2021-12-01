@@ -22,8 +22,10 @@ function Legal()
 
 function Contact()
 {
+
     require("Contact.php");
 }
+
 
 function Inscription()
 {
@@ -32,10 +34,16 @@ function Inscription()
 
 function traitement()
 {
+
     require("traitement.php");
 }
 
 function connexion()
+{
+    require("connexion.php");
+}
+
+function deconnexion()
 {
     require("connexion.php");
 }

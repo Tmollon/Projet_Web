@@ -1,10 +1,8 @@
-<link rel="stylesheet" href="Styles/Contact.css">
-
-<link rel="stylesheet" href="Styles/general.css">
 
 <script src="Scripts/Contact.js"></script>
 
 
+<link rel="stylesheet" href="../Styles/Contact.css">
 
 <?php
 
@@ -21,6 +19,7 @@ if (!$mysqli) {
 }
 
 ?>
+
 
 <?php
 
@@ -48,6 +47,7 @@ if (isset($_POST['nom'], $_POST['Email'], $_POST['Message'])) {
 if ($AfficherFormulaire == 1) {
 ?>
 
+
     <div class="wrapper">
         <h2>CONTACTEZ NOUS</h2>
         <form action="/Projet_Web/index.php?action=Contact" method="POST">
@@ -68,7 +68,3 @@ if ($AfficherFormulaire == 1) {
             </div>
         </form>
     </div>
-
-<?php
-}
-?>
