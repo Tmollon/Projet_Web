@@ -35,4 +35,10 @@ Avec Docker il est très facile de déployer notre application à la volée sur 
 
 #### Permettre la mise en place d'un espace de développement et de test privilégié
 
-Sans container il est nécéssaire d'avoir un environnement de developpement local ( serveur LAMP ), celui ci peut differer en configuration de l'environnement de production 
+Sans container il est nécéssaire d'avoir un environnement de developpement local ( serveur LAMP ), celui ci peut differer en configuration de l'environnement de production et donc causer des problèmes lors du déploiement.
+Avec nos containers l'environnement de production est identique à l'environnement de développement étant donné que l'environnement de developpement à la même configuration et peut être répliquée à l'infini.
+Dans le futur ont peut aussi imaginer avoir un environnement de dev , un de test et un de production dans les conteneurs séparés et lorsqu'on veut envoyer une version en production il nous suffise de remplacer le conteneur de production par celui de dev et ceci permettant une mise à jour avec un minimum d'intéruption.
+
+### Point d'entrée unique
+
+En naviguant sur le site on reste toujours à la racine (index.php) 
