@@ -45,7 +45,10 @@ var_dump($_SESSION['pseudo']);
                 connexion();
             }elseif ($_GET['action'] == 'Deconnecter') {
                 deconnexion();
+            }elseif ($_GET['action'] == 'Seconnecter') {
+                seconnecter();
             }
+
         } else {
             Accueil();
         } ?>

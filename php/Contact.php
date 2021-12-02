@@ -1,7 +1,7 @@
 <script src="Scripts/Contact.js"></script>
 
 
-<link rel="stylesheet" href="../Styles/Contact.css">
+<link rel="stylesheet" href="Styles/Contact.css">
 
 <?php
 
