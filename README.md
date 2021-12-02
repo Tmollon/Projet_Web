@@ -41,4 +41,15 @@ Dans le futur ont peut aussi imaginer avoir un environnement de dev , un de test
 
 ### Point d'entrée unique
 
-En naviguant sur le site on reste toujours à la racine (index.php) 
+En naviguant sur le site on reste toujours à la racine (index.php) et les différentes pages sont chargées dans le body.
+Ceci nous permet plusieur choses:
+
+- Utiliser la session php plus facilement pour gérer le compte utilisateur ainsi que son espace , sa connection etc
+- Charger une feuille de style générale pour éviter la répétition de code et simplifier notre CSS
+- Charger une seule fois le menu, le header , le footer
+
+## Mise en place du site
+
+Récupérez le repo git 
+Si vous ne les avez pas installez docker et docker compose (sudo apt install docker docker-compose)
+executez ''' docker-compose up -d ''' 
