@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION['pseudo']);
 ?>
 
 
@@ -10,14 +9,13 @@ var_dump($_SESSION['pseudo']);
 <head>
     <meta charset="utf-8">
     <title>My Drugs</title>
- 
+
 
     <link rel="stylesheet" href="Styles/general.css">
 
     <script src="Scripts/My_Drugs.js"></script>
 
-    <link rel="icon" type="image/jpg" sizes="16x16"
-        href="https://thumbs.dreamstime.com/b/logo-de-feuille-drogue-cannabis-style-d-ensemble-130132151.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="https://thumbs.dreamstime.com/b/logo-de-feuille-drogue-cannabis-style-d-ensemble-130132151.jpg">
 </head>
 
 <body class="Site">
@@ -43,23 +41,22 @@ var_dump($_SESSION['pseudo']);
                 traitement();
             } elseif ($_GET['action'] == 'Connexion') {
                 connexion();
-            }elseif ($_GET['action'] == 'Deconnecter') {
+            } elseif ($_GET['action'] == 'Deconnecter') {
                 deconnexion();
-            }elseif ($_GET['action'] == 'Seconnecter') {
+            } elseif ($_GET['action'] == 'Seconnecter') {
                 seconnecter();
-            }elseif ($_GET['action'] == 'Contacter') {
+            } elseif ($_GET['action'] == 'Contacter') {
                 Contacter();
-            }elseif ($_GET['action'] == 'Inscrire') {
+            } elseif ($_GET['action'] == 'Inscrire') {
                 Inscrire();
             }
-
         } else {
             Accueil();
         } ?>
 
 
     </main>
-    <?php include('php/footer.php');?>
+    <?php include('php/footer.php'); ?>
 </body>
 
 </html>
