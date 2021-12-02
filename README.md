@@ -52,4 +52,4 @@ Ceci nous permet plusieur choses:
 
 Récupérez le repo git 
 Si vous ne les avez pas installez docker et docker compose (sudo apt install docker docker-compose)
-executez ''' docker-compose up -d ''' 
+executez ``` docker-compose up -d  ```
