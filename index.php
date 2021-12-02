@@ -47,6 +47,10 @@ var_dump($_SESSION['pseudo']);
                 deconnexion();
             }elseif ($_GET['action'] == 'Seconnecter') {
                 seconnecter();
+            }elseif ($_GET['action'] == 'Contacter') {
+                Contacter();
+            }elseif ($_GET['action'] == 'Inscrire') {
+                Inscrire();
             }
 
         } else {
