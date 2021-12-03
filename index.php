@@ -1,6 +1,7 @@
 <?php
 session_start();
 var_dump($_SESSION['pseudo']);
+var_dump($_GET);
 ?>
 
 
@@ -30,6 +31,7 @@ var_dump($_SESSION['pseudo']);
                 Accueil();
             } elseif ($_GET['action'] == 'Dure') {
                 Dur();
+                afficherproduit();
             } elseif ($_GET['action'] == 'Douce') {
                 Douce();
             } elseif ($_GET['action'] == 'Legale') {

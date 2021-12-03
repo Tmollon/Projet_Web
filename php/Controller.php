@@ -198,12 +198,13 @@ function AddProduit()
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
         $AfficherFormulaire = 1;
         
-        if (isset($_POST['nom'], $_POST['prix'], $_POST['quantite'])) {
+        if (isset($_POST['nom'], $_POST['prix'], $_POST['quantite'],$_POST['classe'])) {
             echo ("Salut");
 
             $nom = $_POST['nom'];
             $prix = $_POST['prix'];
             $quantite = $_POST['quantite'];
+            $classe = $_POST['classe'];
 
             if (empty($nom)) {
                 echo "Le champ nom de produit est vide.";
@@ -211,10 +212,12 @@ function AddProduit()
                 echo "Le champ prix unitaire est vide.";
             } elseif (empty($quantite)) {
                 echo "Le champ quantité est vide.";
+            } elseif (empty($classe)) {
+                echo "Le champ classe est vide.";
             } else {
-                $sql = 'INSERT INTO produit (NomProduit,Quantité,Prix) VALUES (:nom,:quantite,:prix)';
+                $sql = 'INSERT INTO produit (NomProduit,Quantité,Prix,Classe) VALUES (:nom,:quantite,:prix,:classe)';
                 $sth = $conn->prepare($sql);
-                $sth->execute(array(':nom' => $nom, ':quantite' => $quantite, ':prix' => $prix, ));
+                $sth->execute(array(':nom' => $nom, ':quantite' => $quantite, ':prix' => $prix, ':classe' => $classe));
                 require('ValidProduit.php');
                 $AfficherFormulaire == 0;
             }
@@ -228,3 +231,29 @@ function AddProduit()
         echo "Erreur : " . $e->getMessage();
     }
 }
+
+function afficherproduit()
+{
+    $servername = "localhost";
+    $username = "Nassim";
+    $password = "cpir";
+    echo "oui";
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
+
+        
+            if($_GET["action"]=="Dure"){
+                echo "HELLO";
+                $query = $conn->prepare("SELECT * FROM produit WHERE Classe= Dure");
+                $query->execute("Classe");
+                $user = $query->fetch();
+                echo $user;
+            }
+
+        
+            }catch (PDOException $e) {
+        $conn->rollBack();
+        echo "Erreur : " . $e->getMessage();
+    }
+}
+

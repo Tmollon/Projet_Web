@@ -19,6 +19,11 @@
                 <input name="quantite" id="quantite" rows="5" placeholder="Combien de stock disponible ?"></input>
             </div>
             <div class="form-group">
+                <label for="classe">Type de drogue </label>
+                <input name="classe" id="classe" placeholder="Dure / Douce / Légale"></input>
+
+            </div>
+            <div class="form-group">
                 <button type="submit" class="submit"><i class="far fa-paper-plane"></i>Envoyer</button>
             </div>
         </form>
