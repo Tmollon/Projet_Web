@@ -9,8 +9,8 @@
 
 $BDD = array();
 $BDD['host'] = "localhost";
-$BDD['user'] = "root";
-$BDD['pass'] = "password";
+$BDD['user'] = "Nassim";
+$BDD['pass'] = "cpir";
 $BDD['db'] = "drugs";
 $mysqli = mysqli_connect($BDD['host'], $BDD['user'], $BDD['pass'], $BDD['db']);
 if (!$mysqli) {
