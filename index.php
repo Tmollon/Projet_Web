@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_SESSION['pseudo']);
 ?>
 
 
@@ -49,6 +50,8 @@ session_start();
                 Contacter();
             } elseif ($_GET['action'] == 'Inscrire') {
                 Inscrire();
+            } elseif ($_GET['action'] == 'Produit') {
+                AddProduit();
             }
         } else {
             Accueil();

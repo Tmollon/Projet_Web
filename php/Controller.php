@@ -72,7 +72,7 @@ function seconnecter()
                 $user = $query->fetch();
 
                 if ($user && password_verify($_POST['mdp'], $user['mdp'])) {
-                    $_SESSION['pseudo'] = $user;
+                    $_SESSION = $user;
                     header('Location: index.php?action=Accueil');
                 } else {
 
