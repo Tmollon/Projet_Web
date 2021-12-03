@@ -42,6 +42,10 @@ function connexion()
 {
     require("connexion.php");
 }
+function Produit()
+{
+    require("Produit.php");
+}
 
 function deconnexion()
 {
@@ -56,8 +60,8 @@ function deconnexion()
 function seconnecter()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "password";
+    $username = "Nassim";
+    $password = "cpir";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
@@ -96,8 +100,8 @@ function Contacter()
 
 
     $servername = "localhost";
-    $username = "root";
-    $password = "password";
+    $username = "Nassim";
+    $password = "cpir";
 
     try {
 
@@ -137,8 +141,8 @@ function Contacter()
 function Inscrire()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "password";
+    $username = "Nassim";
+    $password = "cpir";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
@@ -168,13 +172,59 @@ function Inscrire()
                 $sth->execute(array(':pseudo' => $_POST['pseudo'], ':mdp' => password_hash($_POST['mdp'], PASSWORD_DEFAULT), ':email' => $_POST['email']));
                 require('inscri.php');
                 $AfficherFormulaire = 0;
+
             }
         }
+    
     } catch (PDOException $e) {
         $conn->rollBack();
         echo "Erreur : " . $e->getMessage();
     }
     if ($AfficherFormulaire == 1) {
         require('inscription.php');
+    }
+}
+
+function AddProduit()
+{
+
+
+    $servername = "localhost";
+    $username = "Nassim";
+    $password = "cpir";
+    
+    try {
+
+        $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
+        $AfficherFormulaire = 1;
+        
+        if (isset($_POST['nom'], $_POST['prix'], $_POST['quantite'])) {
+            echo ("Salut");
+
+            $nom = $_POST['nom'];
+            $prix = $_POST['prix'];
+            $quantite = $_POST['quantite'];
+
+            if (empty($nom)) {
+                echo "Le champ nom de produit est vide.";
+            } elseif (empty($prix)) {
+                echo "Le champ prix unitaire est vide.";
+            } elseif (empty($quantite)) {
+                echo "Le champ quantité est vide.";
+            } else {
+                $sql = 'INSERT INTO produit (NomProduit,Quantité,Prix) VALUES (:nom,:quantite,:prix)';
+                $sth = $conn->prepare($sql);
+                $sth->execute(array(':nom' => $nom, ':quantite' => $quantite, ':prix' => $prix, ));
+                require('ValidProduit.php');
+                $AfficherFormulaire == 0;
+            }
+        }
+        if ($AfficherFormulaire == 1) {
+            require('Produit.php');
+        }
+    } catch (PDOException $e) {
+        echo ("salut2");
+        $conn->rollBack();
+        echo "Erreur : " . $e->getMessage();
     }
 }

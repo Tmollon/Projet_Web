@@ -5,7 +5,7 @@
 
     <div class="wrapper">
         <h2>CONTACTEZ NOUS</h2>
-        <form action="/Projet_Web/index.php?action=Contacter" method="POST">
+        <form action="/MyDrugs/index.php?action=Contacter" method="POST">
             <div class="form-group">
                 <label for="nom">Nom Prénom</label>
                 <input type="text" name="nom" id="nom" placeholder="Nom et Prénom" required minlength="3" maxlength="25" />

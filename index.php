@@ -51,8 +51,12 @@ var_dump($_SESSION['pseudo']);
             } elseif ($_GET['action'] == 'Inscrire') {
                 Inscrire();
             } elseif ($_GET['action'] == 'Produit') {
+                Produit();
+            } elseif ($_GET['action'] == 'AddProduit') {
                 AddProduit();
             }
+        
+
         } else {
             Accueil();
         } ?>
