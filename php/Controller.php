@@ -60,8 +60,8 @@ function deconnexion()
 function seconnecter()
 {
     $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $username = "root";
+    $password = "password";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
@@ -100,16 +100,15 @@ function Contacter()
 
 
     $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $username = "root";
+    $password = "password";
 
     try {
 
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
         $AfficherFormulaire = 1;
 
-        if (isset($_POST['nom'], $_POST['Email'], $_POST['Message'])) {
-
+        if (isset($_POST['nom'], $_POST['Email'], $_POST['Message'])) { 
             $nom = $_POST['nom'];
             $email = $_POST['Email'];
             $message = $_POST['Message'];
@@ -141,8 +140,8 @@ function Contacter()
 function Inscrire()
 {
     $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $username = "root";
+    $password = "password";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
@@ -190,8 +189,8 @@ function AddProduit()
 
 
     $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $username = "root";
+    $password = "password";
     
     try {
 
@@ -235,8 +234,8 @@ function AddProduit()
 function afficherproduit()
 {
     $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $username = "root";
+    $password = "password";
     echo "oui";
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);

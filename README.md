@@ -1,5 +1,5 @@
 # Projet_Web
-Projet Web de Tom Mollon, Holder Kyllian et Dib Nassim.
+Projet Web de Tom Mollon, Holder Kyllian et Dib root.
 
 ## Présentation 
 

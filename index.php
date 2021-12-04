@@ -57,8 +57,6 @@ var_dump($_GET);
             } elseif ($_GET['action'] == 'AddProduit') {
                 AddProduit();
             }
-        
-
         } else {
             Accueil();
         } ?>

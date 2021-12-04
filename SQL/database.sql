@@ -99,11 +99,11 @@ DROP TABLE IF EXISTS `produit`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `produit` (
-  `Reference` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `NomProduit` varchar(100) DEFAULT NULL,
   `Quantité` varchar(100) DEFAULT NULL,
   `Prix` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Reference`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

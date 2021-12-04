@@ -1,12 +1,10 @@
-
-
 <link rel="stylesheet" href="Styles/inscription.css">
 
 <link rel="stylesheet" href="Styles/general.css">
 
 <div class="wrapper">
     <h2>Connectez vous</h2>
-    <form action="/MyDrugs/index.php?action=Seconnecter" method="POST">
+    <form action="/Projet_Web/index.php?action=Seconnecter" method="POST">
         <div class="form-group">
             <label for="nom">Pseudo</label>
             <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required minlength="3" maxlength="25" />
