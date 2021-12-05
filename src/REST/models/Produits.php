@@ -31,7 +31,7 @@ class Produits{
 public function creer(){
 
     // Ecriture de la requête SQL en y insérant le nom de la table
-    $sql = "INSERT INTO " . $this->table . " SET nom=:nom, prix=:prix, description=:description, categories_id=:categories_id, created_at=:created_at";
+    $sql = "INSERT INTO " . $this->table . " SET nom=:nom, prix=:prix, description=:description, categories_id=:categories_id";
 
     // Préparation de la requête
     $query = $this->connexion->prepare($sql);
@@ -41,14 +41,14 @@ public function creer(){
     $this->prix=htmlspecialchars(strip_tags($this->prix));
     $this->description=htmlspecialchars(strip_tags($this->description));
     $this->categories_id=htmlspecialchars(strip_tags($this->categories_id));
-    $this->created_at=htmlspecialchars(strip_tags($this->created_at));
+    
 
     // Ajout des données protégées
     $query->bindParam(":nom", $this->nom);
     $query->bindParam(":prix", $this->prix);
     $query->bindParam(":description", $this->description);
     $query->bindParam(":categories_id", $this->categories_id);
-    $query->bindParam(":created_at", $this->created_at);
+   
 
     // Exécution de la requête
     if($query->execute()){
@@ -64,7 +64,7 @@ public function creer(){
  */
 public function lire(){
     // On écrit la requête
-    $sql = "SELECT c.nom as categories_nom, p.id, p.nom, p.description, p.prix, p.categories_id, p.created_at FROM " . $this->table . " p LEFT JOIN categories c ON p.categories_id = c.id ORDER BY p.created_at DESC";
+    $sql = "SELECT c.nom as categories_nom, p.id, p.nom, p.description, p.prix, p.categories_id FROM " . $this->table . " p LEFT JOIN categories c ON p.categories_id = c.id ";
 
     // On prépare la requête
     $query = $this->connexion->prepare($sql);

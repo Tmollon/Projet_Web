@@ -54,5 +54,6 @@ Récupérez le repo git
 Si vous ne les avez pas installez docker et docker compose (sudo apt install docker docker-compose)
 executez ``` docker-compose up -d  ```
 
-ensuite dans un navigateur ouvrez http://localhost/
+Ensuite dans un navigateur ouvrez http://localhost:8080 
 
+Dans la page de connexion phpMy
