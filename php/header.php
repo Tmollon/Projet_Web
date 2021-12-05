@@ -24,7 +24,7 @@
         <li><a href="index.php?action=Inscription">Inscription</a></li>
     </div>
 <?php
-} elseif ($_SESSION['pseudo'] == 'admin' && password_verify($_SESSION['mdp'], $user['mdp'])) {
+} elseif ($_SESSION['pseudo'] == 'admin') {
 ?>
 
     <nav id="menu">
