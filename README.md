@@ -48,12 +48,34 @@ Ceci nous permet plusieur choses:
 - Charger une feuille de style générale pour éviter la répétition de code et simplifier notre CSS
 - Charger une seule fois le menu, le header , le footer
 
+### API REST
+
+Nous avons une API REST qui nous permet d'ajouter des produits dans la base de donnée de manière simple mais aussi de consulter tout les produits disponible et leur catégorie.
+Nous voulons utiliser l'API pour afficher tout les produits et ensuite permettre au client de faire ses achats 
+
 ## Mise en place du site
 
 Récupérez le repo git 
-Si vous ne les avez pas installez docker et docker compose (sudo apt install docker docker-compose)
+executez    ```sudo apt update```
+            ```sudo apt upgrade```
+            ```sudo apt install docker docker-compose```
+A la racine du répertoire de notre projet
 executez ``` docker-compose up -d  ```
 
-Ensuite dans un navigateur ouvrez http://localhost:8080 
+Ensuite dans un navigateur ouvrez http://localhost
 
-Dans la page de connexion phpMy
+## Difficultés techniques 
+
+Nous avons eu des dificultés pour mettre en place l'affichage des produits avec l'api rest et ensuite permettre l'achat de ces produits.
+L'api est testable en utilisant un plugin pour firefox nommé restclient
+Pour ajouter un produit dans la base on utilise l'adresse http://localhost/REST/produits/lire.php
+
+```
+{
+  
+    "nom": "labonne bite de nass",
+    "description": "sars",
+    "prix": "1",
+    "categories_id": 3
+}
+```
