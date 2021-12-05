@@ -62,7 +62,19 @@ executez    ```sudo apt update```
 A la racine du répertoire de notre projet
 executez ``` docker-compose up -d  ```
 
-Ensuite dans un navigateur ouvrez http://localhost
+Ensuite dans un navigateur ouvrez http://localhost:8080
+
+Connectez vous à php my admin avec l'utilisateur root et le mot de passe MYSQL_ROOT_PASSWORD 
+
+Allez dans la catégorie sql et importez le script SQL/drugs.sql
+
+Une fois la base de donnée enregisté vous pouvez explorer la base de donnée avec php my admin.
+
+Pour voir notre site allez à l'adresse http://localhost/ 
+
+vous pouvez vous connecter sur notre interface avec les logs admin admin 
+
+vous pouvez aussi créer un compte 
 
 ## Difficultés techniques 
 
@@ -78,3 +90,6 @@ Puis dans le body de la requète on insère
     "categories_id": 2
 }
 ```
+## Axes d'améliorations 
+
+Nous aimerions mettre en place l'affichage des produits ainsi que la plateforme de vente 
