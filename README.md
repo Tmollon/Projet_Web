@@ -93,5 +93,7 @@ Puis dans le body de la requète on insère
 ## Axes d'améliorations 
 
 Nous aimerions mettre en place l'affichage des produits ainsi que la plateforme de vente utilisant notre api rest.
+
 Nous autions bien aimé améliorer la sécurité de notre site: notamment en mettant en place le controle des mots de passe (on peut se connecter peut importe le mot de passe)
+
 L'interface de notre site a de nombreux bugs de styles sur lequels nous aurions aimé passer plus de temps.
