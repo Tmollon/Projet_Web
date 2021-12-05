@@ -3,9 +3,9 @@ session_start();
 if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
     // connexion à la base de données
     $db_username = 'root';
-    $db_password = 'password';
+    $db_password = 'MYSQL_ROOT_PASSWORD';
     $db_name     = 'drugs';
-    $db_host     = 'localhost';
+    $db_host     = 'db';
     $db = mysqli_connect($db_host, $db_username, $db_password, $db_name);
     if (!$db) {
         echo "Connexion non établie.";
