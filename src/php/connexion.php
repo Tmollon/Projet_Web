@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/php/connexion.php
 <?php
 session_start();
 if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
@@ -46,6 +47,8 @@ if (isset($_POST['deconnecte'])) {
     session_destroy();
 }
 ?>
+=======
+>>>>>>> 3b34af47a47e753b5cceaf050d39daece4e44e99:php/connexion.php
 
 
 <link rel="stylesheet" href="Styles/inscription.css">
@@ -54,7 +57,7 @@ if (isset($_POST['deconnecte'])) {
 
 <div class="wrapper">
     <h2>Connectez vous</h2>
-    <form action="/Projet_Web/index.php?action=Connexion" method="POST">
+    <form action="/MyDrugs/index.php?action=Seconnecter" method="POST">
         <div class="form-group">
             <label for="nom">Pseudo</label>
             <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required minlength="3" maxlength="25" />

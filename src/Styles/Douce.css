@@ -43,13 +43,14 @@
   
   .product-img {
     position: absolute;
+    
     left: 0;
     margin-top: -16px;
     margin-left: 50px;
   }
   
   .product-detail {
-    padding: 0 20px;
+    text-align: center;
     font-size: 11px;
     color: #fff;
   }
