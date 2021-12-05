@@ -1,12 +1,16 @@
-version: latest
+version: '3.5'
 services:
     php-apache-environment:
       container_name: php-apache
-      image: php:8.0-apache
+      build:
+        context: .
+        dockerfile: './docker/Dockerfile'
+
       volumes:
         - ./src:/var/www/html/
       ports:
         - 80:80
+        
     db:
         container_name: db
         image: mysql

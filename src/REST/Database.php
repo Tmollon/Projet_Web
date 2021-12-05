@@ -1,7 +1,7 @@
 <?php 
 class Database{
     // Propriétés de la base de données
-    private $host = "localhost";
+    private $host = "db";
     private $db_name = "drugs";
     private $username = "root";
     private $password = "MYSQL_ROOT_PASSWORD";
