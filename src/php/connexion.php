@@ -1,8 +1,4 @@
-
-
 <link rel="stylesheet" href="Styles/inscription.css">
-
-<link rel="stylesheet" href="Styles/general.css">
 
 <div class="wrapper">
     <h2>Connectez vous</h2>

@@ -50,7 +50,7 @@ function Produit()
 function deconnexion()
 {
     if ($_POST['deconnecte']) {
-    
+
         session_destroy();
     }
     require("connexion.php");
@@ -86,7 +86,7 @@ function seconnecter()
                 header('Location: connexion.php?erreur=2');
             }
             $conn = null;
-           
+
             require('Accueil.php');
         }
     } catch (PDOException $e) {
@@ -172,10 +172,8 @@ function Inscrire()
                 $sth->execute(array(':pseudo' => $_POST['pseudo'], ':mdp' => password_hash($_POST['mdp'], PASSWORD_DEFAULT), ':email' => $_POST['email']));
                 require('inscri.php');
                 $AfficherFormulaire = 0;
-
             }
         }
-    
     } catch (PDOException $e) {
         $conn->rollBack();
         echo "Erreur : " . $e->getMessage();
@@ -192,13 +190,13 @@ function AddProduit()
     $servername = "db";
     $username = "root";
     $password = "MYSQL_ROOT_PASSWORD";
-    
+
     try {
 
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
         $AfficherFormulaire = 1;
-        
-        if (isset($_POST['nom'], $_POST['prix'], $_POST['quantite'],$_POST['classe'])) {
+
+        if (isset($_POST['nom'], $_POST['prix'], $_POST['quantite'], $_POST['classe'])) {
             echo ("Salut");
 
             $nom = $_POST['nom'];
@@ -241,19 +239,16 @@ function afficherproduit()
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
 
-        
-            if($_GET["action"]=="Dure"){
-                echo "HELLO";
-                $query = $conn->prepare("SELECT * FROM produit WHERE Classe= Dure");
-                $query->execute("Classe");
-                $user = $query->fetch();
-                echo $user;
-            }
 
-        
-            }catch (PDOException $e) {
+        if ($_GET["action"] == "Dure") {
+            echo "HELLO";
+            $query = $conn->prepare("SELECT * FROM produit WHERE Classe= Dure");
+            $query->execute("Classe");
+            $user = $query->fetch();
+            echo $user;
+        }
+    } catch (PDOException $e) {
         $conn->rollBack();
         echo "Erreur : " . $e->getMessage();
     }
 }
-

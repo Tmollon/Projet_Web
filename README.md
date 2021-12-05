@@ -69,13 +69,12 @@ Ensuite dans un navigateur ouvrez http://localhost
 Nous avons eu des dificultés pour mettre en place l'affichage des produits avec l'api rest et ensuite permettre l'achat de ces produits.
 L'api est testable en utilisant un plugin pour firefox nommé restclient
 Pour ajouter un produit dans la base on utilise l'adresse http://localhost/REST/produits/lire.php
-
+Puis dans le body de la requète on insère
 ```
 {
-  
-    "nom": "labonne bite de nass",
-    "description": "sars",
-    "prix": "1",
-    "categories_id": 3
+    "nom": "Canabis",
+    "description": "canabis sativa",
+    "prix": "100",
+    "categories_id": 2
 }
 ```
