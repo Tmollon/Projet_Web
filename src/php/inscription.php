@@ -6,7 +6,7 @@
 
     <div class="wrapper">
         <h2>Inscrivez vous</h2>
-        <form action="/MyDrugs/index.php?action=Inscrire" method="POST">
+        <form action="index.php?action=Inscrire" method="POST">
             <div class="form-group">
                 <label for="nom">Pseudo</label>
                 <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required minlength="3" maxlength="25" />

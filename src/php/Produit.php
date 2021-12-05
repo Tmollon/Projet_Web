@@ -5,7 +5,7 @@
 
     <div class="wrapper">
         <h2>AJOUT DE PRODUITS</h2>
-        <form action="/MyDrugs/index.php?action=AddProduit" method="POST">
+        <form action="index.php?action=AddProduit" method="POST">
             <div class="form-group">
                 <label for="nom">Nom Produit</label>
                 <input type="text" name="nom" id="nom" placeholder="Nom du produit" required minlength="3" maxlength="25" />

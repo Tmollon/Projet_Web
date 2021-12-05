@@ -1,7 +1,7 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 session_start();
-var_dump($_SESSION['pseudo']);
-var_dump($_GET);
+
 ?>
 
 

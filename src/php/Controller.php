@@ -50,7 +50,7 @@ function Produit()
 function deconnexion()
 {
     if ($_POST['deconnecte']) {
-        var_dump('deconnecter');
+    
         session_destroy();
     }
     require("connexion.php");
@@ -59,9 +59,9 @@ function deconnexion()
 
 function seconnecter()
 {
-    $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $servername = "db";
+    $username = "root";
+    $password = "MYSQL_ROOT_PASSWORD";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
@@ -86,7 +86,7 @@ function seconnecter()
                 header('Location: connexion.php?erreur=2');
             }
             $conn = null;
-            var_dump($_SESSION['pseudo']);
+           
             require('Accueil.php');
         }
     } catch (PDOException $e) {
@@ -99,9 +99,9 @@ function Contacter()
 {
 
 
-    $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $servername = "db";
+    $username = "root";
+    $password = "MYSQL_ROOT_PASSWORD";
 
     try {
 
@@ -140,9 +140,9 @@ function Contacter()
 
 function Inscrire()
 {
-    $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $servername = "db";
+    $username = "root";
+    $password = "MYSQL_ROOT_PASSWORD";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
@@ -189,9 +189,9 @@ function AddProduit()
 {
 
 
-    $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $servername = "db";
+    $username = "root";
+    $password = "MYSQL_ROOT_PASSWORD";
     
     try {
 
@@ -234,9 +234,9 @@ function AddProduit()
 
 function afficherproduit()
 {
-    $servername = "localhost";
-    $username = "Nassim";
-    $password = "cpir";
+    $servername = "db";
+    $username = "root";
+    $password = "MYSQL_ROOT_PASSWORD";
     echo "oui";
     try {
         $conn = new PDO("mysql:host=$servername;dbname=drugs", $username, $password);
