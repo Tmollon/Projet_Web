@@ -60,7 +60,7 @@ executez    ```sudo apt update```
             ```sudo apt upgrade```
             ```sudo apt install docker docker-compose```
 A la racine du répertoire de notre projet
-executez ``` docker-compose up -d  ```
+executez ``` sudo docker-compose up -d  ```
 
 Ensuite dans un navigateur ouvrez http://localhost:8080
 
